@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="645" pageHeight="900" whenNoDataType="AllSectionsNoDetail" columnWidth="605" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from Item]]>
+	</queryString>
+	<field name="idItem" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="costPrice" class="java.math.BigDecimal"/>
+	<field name="salesPrice" class="java.math.BigDecimal"/>
+	<field name="discount" class="java.lang.Double"/>
+	<field name="qtyOnHand" class="java.lang.Integer"/>
+	<field name="reOrderLevel" class="java.lang.Integer"/>
+	<field name="supplier_idSupplier" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="162" splitType="Stretch">
+			<staticText>
+				<reportElement x="189" y="47" width="289" height="20"/>
+				<textElement textAlignment="Left">
+					<font fontName="Andalus" size="12"/>
+				</textElement>
+				<text><![CDATA[No 50,Panadura Road,Horana]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="114" y="100" width="412" height="37" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Andalus" size="22" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Current Stock Status Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="10" width="289" height="37" forecolor="#0000FF"/>
+				<textElement textAlignment="Left">
+					<font fontName="Andalus" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sadeepa Book Shop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="67" width="318" height="20"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[Tel - 034 - 3741751 email - sadeepa@gmail.com]]></text>
+			</staticText>
+			<image>
+				<reportElement x="44" y="10" width="104" height="77"/>
+				<imageExpression><![CDATA["C:\\Users\\1\\Documents\\NetBeansProjects\\InventoryControlSystem\\src\\image\\sa.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="90" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="57" width="92" height="33" backcolor="#C0C0C0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="92" y="57" width="90" height="33" backcolor="#C0C0C0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="524" y="57" width="81" height="33" backcolor="#C0C0C0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="444" y="57" width="80" height="33" backcolor="#C0C0C0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="354" y="57" width="90" height="33" backcolor="#C0C0C0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="270" y="57" width="84" height="33" backcolor="#C0C0C0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="182" y="57" width="88" height="33" backcolor="#C0C0C0"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="10" y="70" width="70" height="20" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Item Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="102" y="70" width="70" height="20" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="189" y="70" width="81" height="20" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Cost Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="281" y="70" width="64" height="20" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Sales Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="369" y="70" width="59" height="20" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="461" y="70" width="63" height="20" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Qty On Hand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="536" y="70" width="57" height="20" backcolor="#C0C0C0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Supplier Id]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="524" y="0" width="81" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="444" y="0" width="80" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="354" y="0" width="90" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="270" y="0" width="84" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="182" y="0" width="88" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="92" y="0" width="90" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="0" width="92" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="92" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idItem}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="0" width="90" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="0" width="88" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{costPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="84" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{salesPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="0" width="90" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="0" width="79" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{qtyOnHand}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="526" y="0" width="79" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{supplier_idSupplier}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="94" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="14" y="30" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="445" y="70" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="50" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[- - - - - - - - - - - - - - - - - -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="50" width="100" height="20"/>
+				<textElement verticalAlignment="Top"/>
+				<text><![CDATA[- - - - - - - - - - - - - - - - - - -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="70" width="100" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
